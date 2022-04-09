@@ -80,7 +80,8 @@
         }
 
         //working with a trasition end is more natural then using a timing on setTimeout()
-        const keys = Array.from(document.querySelectorAll('.key'));
+        const keys = document.querySelectorAll('.key');
+        console.log(keys);
         keys.forEach(key => key.addEventListener('transitionend', removeTransition));
 
         window.addEventListener('keydown', playAudio);
